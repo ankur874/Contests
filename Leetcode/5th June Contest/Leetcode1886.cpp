@@ -1,3 +1,5 @@
+#include<vector>
+template <typename T>
 class Solution {
 public:
 void rotateMatrix(vector<vector<int>>& mat,int n){
