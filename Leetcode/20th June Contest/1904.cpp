@@ -5,10 +5,10 @@ using namespace  std;
 class Solution {
 public:
     int numberOfRounds(string startTime, string finishTime) {
-        int h1=(((int)startTime[0])*10+(int)startTime[1]);
-        int h2=(((int)finishTime[0])*10+(int)finishTime[1]);
-        int m1=(((int)startTime[3])*10+(int)startTime[4]);
-        int m2=(((int)finishTime[3])*10+(int)finishTime[4]);
+        int h1=(((int)startTime[0]-'0')*10+(int)(startTime[1]-'0'));
+        int h2=(((int)finishTime[0]-'0')*10+(int)(finishTime[1]-'0'));
+        int m1=(((int)startTime[3]-'0')*10+(int)(startTime[4]-'0'));
+        int m2=(((int)finishTime[3]-'0')*10+(int)(finishTime[4])-'0');
         if(h1>h2||h1==h2&&m1>m2){
             h2+=24;
         }
