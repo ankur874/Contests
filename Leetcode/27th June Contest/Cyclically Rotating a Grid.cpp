@@ -8,9 +8,9 @@ public:
          while(k--){
              int row=0;
              int col=0;
-             while(row<n/2&&col<m){
+             while(row<=n/2&&col<=m/2){
                  int i=row,j=col;
-                 int temp=grid[row][col];
+                 int temp=grid[i][j];
                  int temp2;
                  while(i<n-1){
                      temp2=grid[i+1][j];
@@ -26,14 +26,14 @@ public:
                      j++;
                  }
                  int temp4;
-                 while(i>=0){
+                 while(i>row){
                      temp4=grid[i-1][j];
                      grid[i-1][j]=temp3;
                      temp3=temp4;
                      i--;
                  }
                  int temp5;
-                 while(j>=0){
+                 while(j>col){
                      temp5=grid[i][j-1];
                      grid[i][j-1]=temp4;
                      temp4=temp5;
